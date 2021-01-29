@@ -39,8 +39,6 @@ function summation(number) {
   return sum;
 }
 
-console.log(summation(4));
-console.log(summation(5));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -65,9 +63,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(data){
+    let displayNames = [];
+    data.forEach(function(item) {
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
+    });
+    return displayNames;
   }
+  
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -76,9 +79,10 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(data){
+    return data.map(item => item.animal_name.toLowerCase());
   }
+
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
