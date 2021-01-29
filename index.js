@@ -65,7 +65,7 @@ const zooAnimals = [
 
   function animalNames(data){
     let displayNames = [];
-    data.forEach(function(item) {
+    data.forEach(item => {
       displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
     });
     return displayNames;
@@ -90,9 +90,10 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(data){
+    return data.filter(item => item.population < 5);
   }
+
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -101,8 +102,10 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(data){
+    return data.reduce((accumulator, item) => { 
+      return accumulator + item.population; 
+    }, 0);
   }
   
   
