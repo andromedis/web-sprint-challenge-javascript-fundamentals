@@ -33,8 +33,8 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 
 function summation(number) {
   let sum = 0;
-  for(let i = 1; i <= number; i++) {
-    sum += i;
+  for(let counter = 1; counter <= number; counter++) {
+    sum += counter;
   }
   return sum;
 }
@@ -64,7 +64,7 @@ const zooAnimals = [
   */
 
   function animalNames(data){
-    let displayNames = [];
+    const displayNames = [];
     data.forEach(item => {
       displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
     });
