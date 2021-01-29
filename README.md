@@ -27,13 +27,28 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+`.forEach` and `.map` are both array methods that perform code on each element within an array. However, `.map` always returns a new array that is the result of performing the code block individually on each element of the array, while `.forEach` does not return a new array (although it can have a return statement), it simply performs the code on each item. `.map` is used for transforming data sets, while `.forEach` serves as a fancier `for` loop.
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function is a function that receieves another function as an argument, while a callback is a function that serves as an argument for another function. A callback would be written to be passed to a higher order function, and a higher order function is written to recieve a callback.
 
 3. What is closure?
 
+Closure is where a function cannot find a value for a variable being used within its own scope, so it looks in its outer scope until it finds the value and then passes it down into the inner scope.
+
 4. Describe the four rules of the 'this' keyword.
 
+1) Window binding: when no other binding rules apply, such as in the global scope, `this` binds to the window (in the browser) or console (in node) object. 
+2) Implicit binding: When `this` is used inside a method being called on a object, the object to the left of the dot operator is what `this` binds to.
+3) New binding: When an constructor function is called after the `new` keyword, `this` binds to the object being created within the constructor.
+4) Explicit binding: When the methods `.call`, `.apply`, or `.bind` are called on a function, `this` within the function binds to the object passed in as the first argument to the method.
+
 5. Why do we need super() in an extended class?
+
+In an extended class, a `super()` call is needed in the constructor because it allows the child class to inherit the attributes of the parent class. It is essentially a call to the constructor of the parent class, and needs to recieve as arguments the attributes of the child class that are created in the parent constructor.
+
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
