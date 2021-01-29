@@ -17,7 +17,10 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+/* The nested function accesses the variable 'internal' through a closure. The function first looks for the
+ * variable within it's own scope, and when it cannot be found, it looks to it's external scope to find the
+ * value, creating a closure.
+ */
 
 
 
@@ -28,10 +31,16 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sum = 0;
+  for(let i = 1; i <= number; i++) {
+    sum += i;
   }
+  return sum;
+}
+
+console.log(summation(4));
+console.log(summation(5));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
